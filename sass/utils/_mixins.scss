@@ -7,5 +7,34 @@
     flex-direction: column;
     box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
     margin-top: 60px;
+    cursor: pointer;
+}
 
+@mixin menu {
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
+}
+
+@mixin degrade_note {
+    background: linear-gradient(to right, #f05761, #f6916a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin caption {
+    font-size: $police-section-menu;
+    font-weight: bold;
+    line-height: 3em;
+}
+
+@mixin ligne_titre {
+    width: 11rem;
+    content:'';
+    display: inline-block;
+    vertical-align: middle;
 }

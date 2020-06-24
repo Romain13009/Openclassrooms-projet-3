@@ -1,0 +1,98 @@
+.menu1{
+    margin-top: $margin-top-page;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    & h1{
+        font-size: 2.2em;
+    }
+    &__menu{
+        @include menu;
+        background: $color-menu1;
+        color: $color-menu1-txt;
+        & .header_menu{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3rem;
+            & i{
+                @include degrade_note;
+                margin-bottom: -1rem;
+            }
+        }
+        & .footer_menu{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            & p{
+                font-weight: bold;
+                margin-left: 0.7rem;
+            }
+            & i{
+                @include degrade_note;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.tableau1{
+    width: 80%;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    font-size: $police-menu;
+    line-height: 1.8em;
+    margin-top: -2.5rem;
+    & caption{
+        @include caption;
+    }
+    & .price {
+        font-weight: bold;
+    }
+    &__entree{    
+        margin-top: 3rem; 
+        &--caption::before{     
+            @include ligne_titre;   
+            border-bottom: 3px solid $color-menu1-txt;
+            margin-right: 7.1rem;
+        }
+        &--caption::after{     
+            @include ligne_titre;   
+            border-bottom: 3px solid $color-menu1-txt;
+            margin-left: 7.1rem;
+        }
+    }
+    &__plat{
+        margin-top: 3rem;
+        &--caption::before{     
+            @include ligne_titre;   
+            border-bottom: 3px solid $color-menu1-txt;
+            margin-right: 5.5rem;
+        }
+        &--caption::after{     
+            @include ligne_titre;   
+            border-bottom: 3px solid $color-menu1-txt;
+            margin-left: 5.5rem;
+        }
+    }
+    &__dessert{
+        margin-top: 3rem;
+        &--caption::before{     
+            @include ligne_titre;   
+            border-bottom: 3px solid $color-menu1-txt;
+            margin-right: 4.5rem;
+        }
+        &--caption::after{     
+            @include ligne_titre;   
+            border-bottom: 3px solid $color-menu1-txt;
+            margin-left: 4.5rem;
+        }
+    }
+
+}
