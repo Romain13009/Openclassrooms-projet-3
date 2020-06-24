@@ -1,5 +1,145 @@
-.test {
-  color: #7bff00;
+@charset "UTF-8";
+/*COLORS*/
+/*SIZE*/
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
+.btn__prochainement {
+  color: #fdcb46;
+  font-size: 40px;
+  text-decoration: none;
+  background: #579c87;
+  padding: 0.5rem 5rem;
+  border-radius: 0.6rem;
+}
+
+/*footer*/
+.footer__btn .Mentions_légales {
+  color: #fdcb46;
+  margin-left: 3rem;
+  font-size: 30px;
+  text-decoration: none;
+}
+.footer__btn .Contactez-nous {
+  color: #fdcb46;
+  margin-right: 3rem;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+header {
+  top: 0%;
+  width: 100%;
+  height: 100px;
+  background: #579c87;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+header h1 {
+  color: #fdcb46;
+  font-size: 45px;
+}
+
+.footer {
+  width: 100%;
+  height: 70px;
+  margin-top: 60px;
+  background: #579c87;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.corps_accueil {
+  width: 80%;
+  margin-top: 100px;
+}
+
+.row1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.row1__menu1 {
+  width: 33%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
+  margin-top: 60px;
+  background: #fcdfdb;
+  margin-right: -150px;
+}
+.row1__menu2 {
+  width: 33%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
+  margin-top: 60px;
+  background: #fff5fe;
+  margin-left: -150px;
+}
+
+.row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.row2__menu3 {
+  width: 33%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
+  margin-top: 60px;
+  background: #f9f9f9;
+  margin-right: -150px;
+}
+.row2__menu4 {
+  width: 33%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
+  margin-top: 60px;
+  background: #fdfffd;
+  margin-left: -150px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+/*
+Utils :
+    Variables.
+    Fonctions.
+    Mixins.
+    Placeholders.
+Feuilles de style de tiers (vendors).
+Base.
+Composants.
+Layout.
+Pages.
+Thèmes.
+*/
 
 /*# sourceMappingURL=style.css.map */

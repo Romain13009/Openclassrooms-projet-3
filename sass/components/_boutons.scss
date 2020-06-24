@@ -1,0 +1,31 @@
+.btn{
+    &__prochainement{
+        color: $color-secondary;
+        font-size: 40px;
+        text-decoration: none;
+        background: $color-main;
+        padding: 0.5rem 5rem;
+        border-radius: 0.6rem;
+    }
+}
+
+
+/*footer*/
+
+.footer{
+    &__btn{
+        & .Mentions_légales{
+            color: $color-secondary;
+            margin-left: 3rem;
+            font-size: 30px;
+            text-decoration: none;
+        }
+
+        & .Contactez-nous {
+            color: $color-secondary;
+            margin-right: 3rem;
+            font-size: 30px;
+            text-decoration: none;
+        }
+    }
+}

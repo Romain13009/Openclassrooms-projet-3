@@ -1,0 +1,11 @@
+@mixin menu_page_accueil {
+    width: 33%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
+    margin-top: 60px;
+
+}
