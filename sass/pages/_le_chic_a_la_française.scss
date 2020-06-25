@@ -1,0 +1,55 @@
+.menu2{
+    margin-top: $margin-top-page;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    & h1{
+        font-size: 2.2em;
+    }
+    &__menu{
+        @include menu;
+        background: $color-menu2;
+        & .header_menu2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3rem;
+            @include degrade_titre_menu2;
+            font-size: $police-titre-menu;
+        }
+    }
+}
+
+.tableau2{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    font-size: $police-menu;
+    line-height: 1.8em;
+    margin-top: -2.5rem;
+    margin-bottom: 5rem;
+    & caption{
+        @include caption;
+    }
+    & .price {
+        font-weight: bold;
+    }
+    &__entree{    
+        margin-top: 3rem;
+        color: $color-menu2-txt1; 
+    }
+    &__plat{
+        margin-top: 3rem;
+        color: $color-menu2-txt2;
+    }
+    &__dessert{
+        margin-top: 3rem;
+        color: $color-menu2-txt3;
+    }
+    & tr {
+        display: flex;
+        justify-content: space-between;
+    }
+}

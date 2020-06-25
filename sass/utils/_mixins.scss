@@ -26,6 +26,24 @@
     -webkit-text-fill-color: transparent;
 }
 
+@mixin degrade_titre_menu2 {
+    background: linear-gradient(to bottom right, #de8621, #8f5bfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin degrade_titre_menu3 {
+    background: linear-gradient(to bottom right, #052add, #1a91fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin degrade_titre_menu4 {
+    background: linear-gradient(to bottom right, #3d923a, #beff7f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 @mixin caption {
     font-size: $police-section-menu;
     font-weight: bold;

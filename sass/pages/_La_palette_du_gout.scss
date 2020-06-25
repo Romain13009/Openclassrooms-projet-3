@@ -1,0 +1,54 @@
+.menu4{
+    margin-top: $margin-top-page;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    & h1{
+        font-size: 2.2em;
+    }
+    &__menu{
+        @include menu;
+        background: $color-menu4;
+        & .header_menu4{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3rem;
+            @include degrade_titre_menu4;
+            font-size: $police-titre-menu;
+        }
+    }
+}
+
+.tableau4{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    font-size: $police-menu;
+    line-height: 1.8em;
+    margin-top: -2.5rem;
+    margin-bottom: 5rem;
+    color: $color-menu4-txt;
+    & caption{
+        @include caption;
+    }
+    & .price {
+        font-weight: bold;
+    }
+    &__entree{    
+        margin-top: 3rem;
+        
+    }
+    &__plat{
+        margin-top: 3rem;
+    }
+    &__dessert{
+        margin-top: 3rem;
+    }
+    & tr {
+        display: flex;
+        justify-content: space-between;
+    }
+}
