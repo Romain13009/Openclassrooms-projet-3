@@ -1,46 +1,41 @@
-.corps_accueil{
-    width: 80%;
-    margin-top: 100px;
-}
 
 .row1{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 
     &__menu1{
         @include menu_page_accueil;
         background: $color-menu1;
-        margin-right: $margin-menu;
-
+        margin-left: $margin-menu;
+        
 
     }
     &__menu2{
         @include menu_page_accueil;
         background: $color-menu2;
-        margin-left: $margin-menu;
+        margin-right: $margin-menu;
+        
     }
 }
 
 .row2{
+    margin-top: 8%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
+    justify-content: space-between;
     &__menu3{
         @include menu_page_accueil;
         background: $color-menu3;
-        margin-right: $margin-menu;
+        margin-left: $margin-menu;
     }
     &__menu4{
         @include menu_page_accueil;
         background: $color-menu4;
-        margin-left: $margin-menu;
+        margin-right: $margin-menu;
     }
 }
 
 .btn{
+    margin-top: 10%;
     display: flex;
     justify-content: center;
-    margin-top: 60px;
 }
