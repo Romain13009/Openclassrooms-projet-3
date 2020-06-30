@@ -1,21 +1,23 @@
 .menu3{
-    margin-top: $margin-top-page;
     width: 80%;
+    margin-bottom: 30%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     & h1{
-        font-size: 2.2em;
+        font-size: 1.5em;
     }
     &__menu{
         @include menu;
         background: $color-menu3;
+        color: $color-menu3-txt;
+        font-family: 'black_jackregular', sans-serif;
         & .header_menu3{
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 3rem;
+            margin-top: 1rem;
             @include degrade_titre_menu3;
             font-size: $police-titre-menu;
         }
@@ -29,10 +31,18 @@
     font-size: $police-menu;
     line-height: 1.8em;
     margin-top: -2.5rem;
-    margin-bottom: 5rem;
-    color: $color-menu3-txt;
+    margin-bottom: 3rem;
     & caption{
         @include caption;
+        & .menu3_trait_gauche{
+            width: 25%;
+            vertical-align: middle;
+        }
+        & .menu3_trait_droit{
+            width: 25%;
+            vertical-align: middle;
+            transform: scaleX(-1);;
+        }
     }
     & .price {
         font-weight: bold;

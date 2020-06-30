@@ -23,3 +23,30 @@
         transform: scale (0.5) translateY(5rem);
     }
 }
+
+/*souris survolant menu*/
+
+@mixin animation_menu {
+    transform: scale(1.4);
+}
+
+/*texte souligné*/
+
+.entree_menu1, .plat_menu1, .dessert_menu1, .entree_menu2, .plat_menu2, .dessert_menu2, .entree_menu3, .plat_menu3, .dessert_menu3, .entree_menu4, .plat_menu4, .dessert_menu4{
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height:0.1rem;
+        bottom: 0;
+        left: 0;
+        background: black;
+        transition: width .3s;
+      }
+    &:hover{
+        &::after{
+           width: 100%; 
+        }
+    }
+}

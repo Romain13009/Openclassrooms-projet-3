@@ -2,15 +2,15 @@
     width: 40%;
     height: 25vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
     cursor: pointer;
 }
 
 @mixin menu {
-    width: 75%;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -45,8 +45,6 @@
 
 @mixin caption {
     font-size: $police-section-menu;
-    font-weight: bold;
-    line-height: 3em;
 }
 
 @mixin ligne_titre {

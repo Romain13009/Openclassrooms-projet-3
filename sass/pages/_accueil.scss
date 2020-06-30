@@ -2,19 +2,19 @@
 .row1{
     display: flex;
     justify-content: space-between;
-
     &__menu1{
         @include menu_page_accueil;
         background: $color-menu1;
         margin-left: $margin-menu;
-        
-
+        font-family: 'calligraffitiregular', sans-serif;
+        color: $color-menu1-txt;
     }
     &__menu2{
         @include menu_page_accueil;
         background: $color-menu2;
         margin-right: $margin-menu;
-        
+        font-family: 'redressedregular', sans-serif;
+        @include degrade_titre_menu2;
     }
 }
 
@@ -26,14 +26,42 @@
         @include menu_page_accueil;
         background: $color-menu3;
         margin-left: $margin-menu;
+        font-family: 'black_jackregular', sans-serif;
+        @include degrade_titre_menu3;
     }
     &__menu4{
         @include menu_page_accueil;
         background: $color-menu4;
         margin-right: $margin-menu;
+        font-family: 'playtime_with_hot_toddiesRg', sans-serif;
+        @include degrade_titre_menu4;   
     }
 }
 
+.txt_menu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    & p{
+        font-size: 0.8rem;
+        margin-bottom: -10%;
+    }
+    & i{
+        @include degrade_note;
+        font-size: 1.5em;
+    }
+}
+
+.row1__menu1, .row1__menu2, .row2__menu3, .row2__menu4{
+    transition: 0.2s ease;
+    &:hover{
+        opacity: 50%;
+        .txt_menu{
+            transition: 0.2s ease;
+            @include animation_menu;
+        }
+    }
+}
 .btn{
     margin-top: 10%;
     display: flex;
