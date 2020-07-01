@@ -1,12 +1,8 @@
 .menu1{
-    width: 80%;
-    margin-bottom: 30%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    margin-bottom: 20%;
+    text-align: center;
     & h1{
-        font-size: 1.5rem;
+        font-size: 5vw;   
     }
     &__menu{
         @include menu;
@@ -17,26 +13,26 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 1rem;
             font-size: $police-titre-menu;
+            margin-top: 2em;
             & i{
                 @include degrade_note;
-                font-size: 2.5rem;
-                margin-bottom: -1rem;
+                font-size: 9vw;                
             }
         }
         & .footer_menu1{
             display: flex;
             flex-direction: row;
             align-items: center;
-            font-size: 1.3rem;
+            font-size: 3vw;
+            margin-bottom: 5%;
             & p{
                 font-weight: bold;
-                margin-left: 0.7rem;
+                margin-left: 0.7em;
             }
             & i{
                 @include degrade_note;
-                font-size: 2rem;
+                font-size: 5vw;
             }
         }
     }
@@ -48,9 +44,10 @@
     flex-direction: column;
     font-size: $police-menu;
     line-height: 1.8em;
-    margin-top: -2.5rem;
+    margin-top: -2.5em;
     & caption{
-        @include caption;
+        font-size: $police-section-menu;
+        font-weight: bold;
         & .menu1_trait_gauche{
             width: 25%;
             vertical-align: middle;
@@ -64,16 +61,54 @@
         font-weight: bold;
     }
     &__entree{    
-        margin-top: 3rem; 
+        margin-top: 3em; 
     }
     &__plat{
-        margin-top: 3rem;
+        margin-top: 3em;
     }
     &__dessert{
-        margin-top: 3rem;
+        margin-top: 3em;
     }
     & tr {
         display: flex;
         justify-content: space-between;
+        text-align: left;
+    }
+}
+
+/*RESPONSIVE*/
+
+@media all and (min-width: 770px){
+    .menu1{
+        & h1{
+            font-size: 36px;   
+        }
+        &__menu{
+            width: 700px;
+            & .header_menu1{
+                font-size: 30px;
+                & i{
+                    font-size: 3em;                
+                }
+            }
+            & .footer_menu1{
+                font-size: 28px;
+                margin-bottom: 5%;
+                & p{
+                    font-weight: bold;
+                    margin-left: 0.7em;
+                }
+                & i{
+                    @include degrade_note;
+                    font-size: 38px;
+                }
+            }
+        }
+    } 
+    .tableau1{
+        font-size: 20px;
+        & caption{
+            font-size: 26px;
+        }
     }
 }

@@ -1,6 +1,9 @@
 @mixin menu_page_accueil {
-    width: 40%;
-    height: 25vh;
+    width: 35vw;
+    max-width: 400px;
+    height: 1.5*35vw;
+    max-height: 1.5*400px;
+    margin-left: 5vw; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,10 +13,9 @@
 }
 
 @mixin menu {
-    width: 100%;
+    width: 80vw;
     height: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
@@ -43,9 +45,6 @@
     -webkit-text-fill-color: transparent;
 }
 
-@mixin caption {
-    font-size: $police-section-menu;
-}
 
 @mixin ligne_titre {
     width: 11rem;

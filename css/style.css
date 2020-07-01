@@ -51,7 +51,7 @@
   height: 0.1rem;
   bottom: 0;
   left: 0;
-  background: black;
+  background: rgba(0, 0, 0, 0.685);
   transition: width 0.3s;
 }
 .entree_menu1:hover::after, .plat_menu1:hover::after, .dessert_menu1:hover::after, .entree_menu2:hover::after, .plat_menu2:hover::after, .dessert_menu2:hover::after, .entree_menu3:hover::after, .plat_menu3:hover::after, .dessert_menu3:hover::after, .entree_menu4:hover::after, .plat_menu4:hover::after, .dessert_menu4:hover::after {
@@ -69,6 +69,9 @@ body {
 }
 
 main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin-top: 2rem;
   width: 85%;
 }
@@ -133,17 +136,32 @@ main {
   font-weight: normal;
   font-style: normal;
 }
+.btn {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20%;
+}
 .btn__prochainement {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
   color: #fdcb46;
-  font-size: 1rem;
+  font-size: 4vw;
   text-decoration: none;
   background: #579c87;
-  padding: 0.5rem 5rem;
-  border-radius: 0.6rem;
+  border-radius: 0.5em;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
 }
 .btn__prochainement span {
-  width: 0.4rem;
-  height: 0.4rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0.4em;
+  width: 0.4em;
+  height: 0.4em;
   background-color: #fdcb46;
   border-radius: 50%;
   display: inline-block;
@@ -161,23 +179,16 @@ main {
   animation: points 0.9s ease 0.6s infinite;
 }
 
-/*footer*/
-.footer__btn:hover {
-  animation: wiggle 100ms 3;
+/*RESPONSIVE*/
+@media all and (min-width: 800px) {
+  .btn {
+    width: 40%;
+  }
+  .btn__prochainement {
+    width: 100%;
+    font-size: 36px;
+  }
 }
-.footer__btn .Mentions_légales {
-  color: #fdcb46;
-  margin-left: 1.5rem;
-  font-size: 1.1rem;
-  text-decoration: none;
-}
-.footer__btn .Contactez-nous {
-  color: #fdcb46;
-  margin-right: 1.5rem;
-  font-size: 1.1rem;
-  text-decoration: none;
-}
-
 header {
   width: 100%;
   background: #579c87;
@@ -185,9 +196,15 @@ header {
 }
 header h1 {
   color: #fdcb46;
-  font-size: 2rem;
+  font-size: 2em;
 }
 
+@media all and (min-width: 960px) {
+  header h1 {
+    color: #fdcb46;
+    font-size: 2.5em;
+  }
+}
 .footer {
   width: 100%;
   background: #579c87;
@@ -198,14 +215,40 @@ header h1 {
   bottom: 0;
   padding: 1.5rem;
 }
+.footer__btn:hover {
+  animation: wiggle 100ms 3;
+}
 
+.Mentions_légales {
+  color: #fdcb46;
+  margin-left: 1.5em;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+.Contactez-nous {
+  color: #fdcb46;
+  margin-right: 1.5em;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+/*RESPONSIVE*/
+@media all and (min-width: 960px) {
+  .Mentions_légales, .Contactez-nous {
+    font-size: 1.5em;
+  }
+}
 .row1 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .row1__menu1 {
-  width: 40%;
-  height: 25vh;
+  width: 35vw;
+  max-width: 400px;
+  height: 52.5vw;
+  max-height: 600px;
+  margin-left: 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -218,8 +261,11 @@ header h1 {
   color: #542c31;
 }
 .row1__menu2 {
-  width: 40%;
-  height: 25vh;
+  width: 35vw;
+  max-width: 400px;
+  height: 52.5vw;
+  max-height: 600px;
+  margin-left: 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -237,11 +283,14 @@ header h1 {
 .row2 {
   margin-top: 8%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .row2__menu3 {
-  width: 40%;
-  height: 25vh;
+  width: 35vw;
+  max-width: 400px;
+  height: 52.5vw;
+  max-height: 600px;
+  margin-left: 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -256,8 +305,11 @@ header h1 {
   -webkit-text-fill-color: transparent;
 }
 .row2__menu4 {
-  width: 40%;
-  height: 25vh;
+  width: 35vw;
+  max-width: 400px;
+  height: 52.5vw;
+  max-height: 600px;
+  margin-left: 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -278,14 +330,17 @@ header h1 {
   flex-direction: column;
 }
 .txt_menu p {
-  font-size: 0.8rem;
+  font-size: 2.5vw;
   margin-bottom: -10%;
+}
+.txt_menu h2 {
+  font-size: 4.5vw;
 }
 .txt_menu i {
   background: linear-gradient(to right, #f05761, #f6916a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 1.5em;
+  font-size: 3.5vw;
 }
 
 .row1__menu1, .row1__menu2, .row2__menu3, .row2__menu4 {
@@ -299,28 +354,17 @@ header h1 {
   transform: scale(1.4);
 }
 
-.btn {
-  margin-top: 10%;
-  display: flex;
-  justify-content: center;
-}
-
 .menu1 {
-  width: 80%;
-  margin-bottom: 30%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 20%;
+  text-align: center;
 }
 .menu1 h1 {
-  font-size: 1.5rem;
+  font-size: 5vw;
 }
 .menu1__menu {
-  width: 100%;
+  width: 80vw;
   height: auto;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
@@ -332,43 +376,44 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 3.5vw;
+  margin-top: 2em;
 }
 .menu1__menu .header_menu1 i {
   background: linear-gradient(to right, #f05761, #f6916a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2.5rem;
-  margin-bottom: -1rem;
+  font-size: 9vw;
 }
 .menu1__menu .footer_menu1 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 3vw;
+  margin-bottom: 5%;
 }
 .menu1__menu .footer_menu1 p {
   font-weight: bold;
-  margin-left: 0.7rem;
+  margin-left: 0.7em;
 }
 .menu1__menu .footer_menu1 i {
   background: linear-gradient(to right, #f05761, #f6916a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2rem;
+  font-size: 5vw;
 }
 
 .tableau1 {
   width: 80%;
   display: flex;
   flex-direction: column;
-  font-size: 0.6rem;
+  font-size: 3vw;
   line-height: 1.8em;
-  margin-top: -2.5rem;
+  margin-top: -2.5em;
 }
 .tableau1 caption {
-  font-size: 1.2em;
+  font-size: 3.5vw;
+  font-weight: bold;
 }
 .tableau1 caption .menu1_trait_gauche {
   width: 25%;
@@ -382,35 +427,67 @@ header h1 {
   font-weight: bold;
 }
 .tableau1__entree {
-  margin-top: 3rem;
+  margin-top: 3em;
 }
 .tableau1__plat {
-  margin-top: 3rem;
+  margin-top: 3em;
 }
 .tableau1__dessert {
-  margin-top: 3rem;
+  margin-top: 3em;
 }
 .tableau1 tr {
   display: flex;
   justify-content: space-between;
+  text-align: left;
 }
 
+/*RESPONSIVE*/
+@media all and (min-width: 770px) {
+  .menu1 h1 {
+    font-size: 36px;
+  }
+  .menu1__menu {
+    width: 700px;
+  }
+  .menu1__menu .header_menu1 {
+    font-size: 30px;
+  }
+  .menu1__menu .header_menu1 i {
+    font-size: 3em;
+  }
+  .menu1__menu .footer_menu1 {
+    font-size: 28px;
+    margin-bottom: 5%;
+  }
+  .menu1__menu .footer_menu1 p {
+    font-weight: bold;
+    margin-left: 0.7em;
+  }
+  .menu1__menu .footer_menu1 i {
+    background: linear-gradient(to right, #f05761, #f6916a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 38px;
+  }
+
+  .tableau1 {
+    font-size: 20px;
+  }
+  .tableau1 caption {
+    font-size: 26px;
+  }
+}
 .menu2 {
-  width: 80%;
-  margin-bottom: 30%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 20%;
+  text-align: center;
 }
 .menu2 h1 {
-  font-size: 1.5em;
+  font-size: 5vw;
 }
 .menu2__menu {
-  width: 100%;
+  width: 80vw;
   height: auto;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
@@ -421,24 +498,24 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
   background: linear-gradient(to bottom right, #de8621, #8f5bfe);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 1rem;
+  font-size: 3.5vw;
+  margin-top: 2em;
 }
 
 .tableau2 {
   width: 80%;
   display: flex;
   flex-direction: column;
-  font-size: 0.6rem;
+  font-size: 3vw;
   line-height: 1.8em;
-  margin-top: -2.5rem;
-  margin-bottom: 3rem;
+  margin-top: -2.5em;
+  margin-bottom: 5%;
 }
 .tableau2 caption {
-  font-size: 1.2em;
+  font-size: 3.5vw;
 }
 .tableau2 caption .menu2_trait_gauche {
   width: 25%;
@@ -453,38 +530,56 @@ header h1 {
   font-weight: bold;
 }
 .tableau2__entree {
-  margin-top: 3rem;
+  margin-top: 3em;
   color: #c67412;
 }
 .tableau2__plat {
-  margin-top: 3rem;
+  margin-top: 3em;
   color: #a56799;
 }
 .tableau2__dessert {
-  margin-top: 3rem;
+  margin-top: 3em;
   color: #7858cf;
 }
 .tableau2 tr {
   display: flex;
   justify-content: space-between;
+  text-align: left;
 }
 
+/*RESPONSIVE*/
+@media all and (min-width: 770px) {
+  .menu2 h1 {
+    font-size: 36px;
+  }
+  .menu2__menu {
+    width: 700px;
+  }
+  .menu2__menu .header_menu2 {
+    font-size: 30px;
+  }
+  .menu2__menu .header_menu2 i {
+    font-size: 3em;
+  }
+
+  .tableau2 {
+    font-size: 20px;
+  }
+  .tableau2 caption {
+    font-size: 26px;
+  }
+}
 .menu3 {
-  width: 80%;
-  margin-bottom: 30%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 20%;
+  text-align: center;
 }
 .menu3 h1 {
-  font-size: 1.5em;
+  font-size: 5vw;
 }
 .menu3__menu {
-  width: 100%;
+  width: 80vw;
   height: auto;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
@@ -496,24 +591,24 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
   background: linear-gradient(to bottom right, #052add, #1a91fa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 1rem;
+  font-size: 3.5vw;
+  margin-top: 2em;
 }
 
 .tableau3 {
   width: 80%;
   display: flex;
   flex-direction: column;
-  font-size: 0.6rem;
+  font-size: 3vw;
   line-height: 1.8em;
-  margin-top: -2.5rem;
-  margin-bottom: 3rem;
+  margin-top: -2.5em;
+  margin-bottom: 5%;
 }
 .tableau3 caption {
-  font-size: 1.2em;
+  font-size: 3.5vw;
 }
 .tableau3 caption .menu3_trait_gauche {
   width: 25%;
@@ -528,35 +623,53 @@ header h1 {
   font-weight: bold;
 }
 .tableau3__entree {
-  margin-top: 3rem;
+  margin-top: 3em;
 }
 .tableau3__plat {
-  margin-top: 3rem;
+  margin-top: 3em;
 }
 .tableau3__dessert {
-  margin-top: 3rem;
+  margin-top: 3em;
 }
 .tableau3 tr {
   display: flex;
   justify-content: space-between;
+  text-align: left;
 }
 
+/*RESPONSIVE*/
+@media all and (min-width: 770px) {
+  .menu3 h1 {
+    font-size: 36px;
+  }
+  .menu3__menu {
+    width: 700px;
+  }
+  .menu3__menu .header_menu3 {
+    font-size: 30px;
+  }
+  .menu3__menu .header_menu3 i {
+    font-size: 3em;
+  }
+
+  .tableau3 {
+    font-size: 20px;
+  }
+  .tableau3 caption {
+    font-size: 26px;
+  }
+}
 .menu4 {
-  width: 80%;
-  margin-bottom: 30%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 20%;
+  text-align: center;
 }
 .menu4 h1 {
-  font-size: 1.5em;
+  font-size: 5vw;
 }
 .menu4__menu {
-  width: 100%;
+  width: 80vw;
   height: auto;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
@@ -568,24 +681,24 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
   background: linear-gradient(to bottom right, #3d923a, #beff7f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 1rem;
+  font-size: 3.5vw;
+  margin-top: 2em;
 }
 
 .tableau4 {
   width: 80%;
   display: flex;
   flex-direction: column;
-  font-size: 0.6rem;
+  font-size: 3vw;
   line-height: 1.8em;
-  margin-top: -2.5rem;
-  margin-bottom: 3rem;
+  margin-top: -2.5em;
+  margin-bottom: 5%;
 }
 .tableau4 caption {
-  font-size: 1.2em;
+  font-size: 3.5vw;
 }
 .tableau4 caption .menu4_trait_gauche {
   width: 25%;
@@ -600,19 +713,42 @@ header h1 {
   font-weight: bold;
 }
 .tableau4__entree {
-  margin-top: 3rem;
+  margin-top: 3em;
 }
 .tableau4__plat {
-  margin-top: 3rem;
+  margin-top: 3em;
 }
 .tableau4__dessert {
-  margin-top: 3rem;
+  margin-top: 3em;
 }
 .tableau4 tr {
   display: flex;
   justify-content: space-between;
+  text-align: left;
 }
 
+/*RESPONSIVE*/
+@media all and (min-width: 770px) {
+  .menu4 h1 {
+    font-size: 36px;
+  }
+  .menu4__menu {
+    width: 700px;
+  }
+  .menu4__menu .header_menu4 {
+    font-size: 30px;
+  }
+  .menu4__menu .header_menu4 i {
+    font-size: 3em;
+  }
+
+  .tableau4 {
+    font-size: 20px;
+  }
+  .tableau4 caption {
+    font-size: 26px;
+  }
+}
 /*
 Utils :
     Variables.
