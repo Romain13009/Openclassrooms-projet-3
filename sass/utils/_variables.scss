@@ -23,7 +23,15 @@ $color-menu4-txt: #161716;
 $margin-menu: 5%;
 $margin-section-menu: 3em;
 
+$margin-bottom-menu: 5%;
+$margin-top-sous-menu: 3em;
+
 
 $police-menu: 3vw;
 $police-section-menu: 3.5vw;
 $police-titre-menu: 3.5vw;
+
+/*@media all and (min-width: 770px)*/
+
+$ls-width-menu: 700px;
+$ls-police-h1:36px;

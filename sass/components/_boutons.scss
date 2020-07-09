@@ -1,15 +1,13 @@
 .btn{
-    margin-top: 10%;
     display: flex;
     justify-content: center;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     &__prochainement{
         width: 40vw;
         display: flex;
         justify-content: center;
         color: $color-secondary;
         font-size: 4vw;
-        text-decoration: none;
         background: $color-main;
         border-radius: 0.5em;
         padding-top: 0.4em;
@@ -42,7 +40,7 @@
 
 @media all and (min-width: 800px){
     .btn{
-        width: 40%;
+        width: 400px;
         &__prochainement{
             width: 100%;
             font-size: 36px;

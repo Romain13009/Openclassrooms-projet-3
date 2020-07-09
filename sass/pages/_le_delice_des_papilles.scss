@@ -1,42 +1,27 @@
 .menu3{
-    margin-bottom: 20%;
-    text-align: center;
-    & h1{
-        font-size: 5vw;
-    }
+    @include parametre_page_menu;
     &__menu{
         @include menu;
         background: $color-menu3;
         color: $color-menu3-txt;
         font-family: 'black_jackregular', sans-serif;
-        & .header_menu3{
-            display: flex;
-            flex-direction: column;
-            align-items: center;           
+        & .header_menu3{    
             @include degrade_titre_menu3;
-            font-size: $police-titre-menu;
-            margin-top: 2em;
+            @include parametre_header_menu;
         }
     }
 }
 
 .tableau3{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    font-size: $police-menu;
-    line-height: 1.8em;
-    margin-top: -2.5em;
-    margin-bottom: 5%;
+    @include parametre_tableau;
+    margin-bottom: $margin-bottom-menu;
     & caption{
         font-size: $police-section-menu;
         & .menu3_trait_gauche{
-            width: 25%;
-            vertical-align: middle;
+            @include parametre_trait;
         }
         & .menu3_trait_droit{
-            width: 25%;
-            vertical-align: middle;
+            @include parametre_trait;
             transform: scaleX(-1);;
         }
     }
@@ -44,19 +29,14 @@
         font-weight: bold;
     }
     &__entree{    
-        margin-top: 3em;
+        margin-top: $margin-top-sous-menu;
         
     }
     &__plat{
-        margin-top: 3em;
+        margin-top: $margin-top-sous-menu;
     }
     &__dessert{
-        margin-top: 3em;
-    }
-    & tr {
-        display: flex;
-        justify-content: space-between;
-        text-align: left;
+        margin-top: $margin-top-sous-menu;
     }
 }
 
@@ -65,22 +45,16 @@
 @media all and (min-width: 770px){
     .menu3{
         & h1{
-            font-size: 36px;   
+            font-size: $ls-police-h1;   
         }
         &__menu{
-            width: 700px;
+            width: $ls-width-menu;
             & .header_menu3{
-                font-size: 30px;
-                & i{
-                    font-size: 3em;                
-                }
+                @include ls_parametre_header_menu;
             }   
         }
     } 
     .tableau3{
-        font-size: 20px;
-        & caption{
-            font-size: 26px;
-        }
+        @include ls_parametre_tableau;
     }
 }

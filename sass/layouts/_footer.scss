@@ -9,7 +9,9 @@
     padding: 1.5rem;
     &__btn{
         &:hover {
-            animation: wiggle 100ms 3;
+            animation: wiggle 100ms;
+            animation-iteration-count: infinite;
+
         }
     }
 }

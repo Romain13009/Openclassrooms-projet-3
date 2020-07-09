@@ -3,38 +3,33 @@
     display: flex;
     justify-content: center;
     &__menu1{
-        @include menu_page_accueil;
+        @include menu_page_accueil_gauche;
         background: $color-menu1;
-        margin-left: $margin-menu;
         font-family: 'calligraffitiregular', sans-serif;
         color: $color-menu1-txt;
     }
     &__menu2{
-        @include menu_page_accueil;
+        @include menu_page_accueil_droit;
         background: $color-menu2;
-        margin-right: $margin-menu;
         font-family: 'redressedregular', sans-serif;
         @include degrade_titre_menu2;
     }
 }
 
 .row2{
-    margin-top: 8%;
     display: flex;
     justify-content: center;
     &__menu3{
-        @include menu_page_accueil;
+        @include menu_page_accueil_gauche;
         background: $color-menu3;
-        margin-left: $margin-menu;
         font-family: 'black_jackregular', sans-serif;
         @include degrade_titre_menu3;
     }
     &__menu4{
-        @include menu_page_accueil;
+        @include menu_page_accueil_droit;
         background: $color-menu4;
-        margin-right: $margin-menu;
         font-family: 'playtime_with_hot_toddiesRg', sans-serif;
-        @include degrade_titre_menu4;   
+        @include degrade_titre_menu4;
     }
 }
 
@@ -56,12 +51,29 @@
 }
 
 .row1__menu1, .row1__menu2, .row2__menu3, .row2__menu4{
-    transition: 0.2s ease;
-    &:hover{
-        opacity: 50%;
-        .txt_menu{
-            transition: 0.2s ease;
-            @include animation_menu;
-        }
-    }
+    @include animation_menu;
 }
+
+/*RESPONSIVE*/
+
+@media all and (min-width: 960px){
+    .row1__menu1, .row1__menu2, .row2__menu3, .row2__menu4{
+        max-width: 350px;
+        max-height: 1.5*350px;
+        margin-left: 50px;
+    }
+    .txt_menu{
+        & p{
+            font-size: 26px;
+            margin-bottom: -10%;
+        }
+        & h2{
+            font-size: 42px;
+        }
+        & i{
+            @include degrade_note;
+            font-size: 40px;
+        }
+    }   
+}
+
