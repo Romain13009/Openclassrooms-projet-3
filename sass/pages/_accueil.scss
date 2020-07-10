@@ -6,13 +6,15 @@
         @include menu_page_accueil_gauche;
         background: $color-menu1;
         font-family: 'calligraffitiregular', sans-serif;
-        color: $color-menu1-txt;
+        color: $color-menu1-txt;        
     }
     &__menu2{
         @include menu_page_accueil_droit;
         background: $color-menu2;
-        font-family: 'redressedregular', sans-serif;
-        @include degrade_titre_menu2;
+        font-family: 'redressedregular', sans-serif;       
+        & .txt_menu{
+            @include degrade_titre_menu2;
+        }
     }
 }
 
@@ -23,13 +25,17 @@
         @include menu_page_accueil_gauche;
         background: $color-menu3;
         font-family: 'black_jackregular', sans-serif;
-        @include degrade_titre_menu3;
+        & .txt_menu{
+            @include degrade_titre_menu3;
+        }
     }
     &__menu4{
         @include menu_page_accueil_droit;
         background: $color-menu4;
         font-family: 'playtime_with_hot_toddiesRg', sans-serif;
-        @include degrade_titre_menu4;
+        & .txt_menu{
+            @include degrade_titre_menu4;
+        }
     }
 }
 
@@ -53,6 +59,7 @@
 .row1__menu1, .row1__menu2, .row2__menu3, .row2__menu4{
     @include animation_menu;
 }
+
 
 /*RESPONSIVE*/
 

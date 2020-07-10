@@ -24,17 +24,16 @@
 
 /*souris survolant menu*/
 
-@mixin animation_menu {
-    transition: all 0.2s ease;
-    &:hover{
-        opacity: 50%;
+@mixin animation_menu{
+    &:hover{           
         .txt_menu{
-            transition: transform 0.2s ease;
-            transform: scale(1.2);
-        }
+        transition: all 0.5s ease; 
+        transform: scale(1.2);
+        opacity: 50%;     
+        }  
     }
 }
-
+    
 
 /*texte souligné*/
 
