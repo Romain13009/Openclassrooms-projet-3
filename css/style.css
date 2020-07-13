@@ -37,12 +37,8 @@
 }
 /*souris survolant menu*/
 /*texte souligné*/
-.entree_menu1, .plat_menu1, .dessert_menu1, .entree_menu2, .plat_menu2, .dessert_menu2, .entree_menu3, .plat_menu3, .dessert_menu3, .entree_menu4, .plat_menu4, .dessert_menu4 {
-  position: relative;
-}
 .entree_menu1::after, .plat_menu1::after, .dessert_menu1::after, .entree_menu2::after, .plat_menu2::after, .dessert_menu2::after, .entree_menu3::after, .plat_menu3::after, .dessert_menu3::after, .entree_menu4::after, .plat_menu4::after, .dessert_menu4::after {
   content: "";
-  position: absolute;
   width: 0;
   height: 0.1rem;
   bottom: 0;
