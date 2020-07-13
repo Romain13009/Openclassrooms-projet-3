@@ -3,17 +3,22 @@
     display: flex;
     justify-content: center;
     &__menu1{
-        @include menu_page_accueil_gauche;
+        @include menu_page_accueil;
         background: $color-menu1;
         font-family: 'calligraffitiregular', sans-serif;
         color: $color-menu1-txt;        
     }
     &__menu2{
-        @include menu_page_accueil_droit;
+        @include menu_page_accueil;
         background: $color-menu2;
         font-family: 'redressedregular', sans-serif;       
         & .txt_menu{
-            @include degrade_titre_menu2;
+            & p{
+                @include degrade_titre_menu2;    
+            }
+            & h2{
+                @include degrade_titre_menu2; 
+            }    
         }
     }
 }
@@ -22,19 +27,29 @@
     display: flex;
     justify-content: center;
     &__menu3{
-        @include menu_page_accueil_gauche;
+        @include menu_page_accueil;
         background: $color-menu3;
         font-family: 'black_jackregular', sans-serif;
         & .txt_menu{
-            @include degrade_titre_menu3;
+            & p{
+                @include degrade_titre_menu3;    
+            }
+            & h2{
+                @include degrade_titre_menu3; 
+            }    
         }
     }
     &__menu4{
-        @include menu_page_accueil_droit;
+        @include menu_page_accueil;
         background: $color-menu4;
         font-family: 'playtime_with_hot_toddiesRg', sans-serif;
         & .txt_menu{
-            @include degrade_titre_menu4;
+            & p{
+                @include degrade_titre_menu4;    
+            }
+            & h2{
+                @include degrade_titre_menu4; 
+            }    
         }
     }
 }
@@ -63,11 +78,11 @@
 
 /*RESPONSIVE*/
 
+/*---------------------------------------ECRANS LARGES*/
+
 @media all and (min-width: 960px){
     .row1__menu1, .row1__menu2, .row2__menu3, .row2__menu4{
-        max-width: 350px;
-        max-height: 1.5*350px;
-        margin-left: 50px;
+        @include menu_page_accueil_grands_ecrans;
     }
     .txt_menu{
         & p{
@@ -84,3 +99,29 @@
     }   
 }
 
+/*---------------------------------------PETITS ECRANS*/
+
+@media all and (max-width: 400px){
+    .row1, .row2{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .row1__menu1, .row1__menu2, .row2__menu3, .row2__menu4{
+        @include menu_page_accueil_petits_ecrans;
+    }
+        .txt_menu{
+        & p{
+            font-size: 7vw;
+            margin-bottom: -10%;
+        }
+        & h2{
+            font-size: 9vw;
+        }
+        & i{
+            @include degrade_note;
+            font-size: 10vw;
+        }
+    }
+}

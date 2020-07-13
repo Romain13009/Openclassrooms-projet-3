@@ -3,31 +3,27 @@
 /*SIZE*/
 /*@media all and (min-width: 770px)*/
 /* @media all and (min-width: 770px) */
+/* @media all and (max-width: 400px) */
+/*@media all and (min-width: 960px)*/
 /*tremblements*/
 @keyframes wiggle {
   0% {
     transform: translate(1px, 1px) rotate(1deg);
   }
-  15% {
+  20% {
     transform: translate(-2px, -2px) rotate(-2deg);
   }
-  30% {
+  40% {
     transform: translate(2px, 2px) rotate(2deg);
   }
-  45% {
-    transform: translate(-3px, -3px) rotate(0deg);
-  }
   60% {
-    transform: translate(3px, 3px) rotate(-2deg);
-  }
-  75% {
     transform: translate(-2px, -2px) rotate(2deg);
   }
-  90% {
-    transform: translate(3px, 2px) rotate(-3deg);
+  80% {
+    transform: translate(2px, 2px) rotate(-2deg);
   }
   100% {
-    transform: translate(-2px, 0px) rotate(2deg);
+    transform: translate(-1px, -1px) rotate(2deg);
   }
 }
 /*prochainement*/
@@ -186,6 +182,11 @@ main {
     font-size: 36px;
   }
 }
+@media all and (max-width: 400px) {
+  .btn {
+    margin-bottom: 30%;
+  }
+}
 header {
   width: 100%;
   background: #579c87;
@@ -246,15 +247,15 @@ header h1 {
   max-width: 400px;
   height: 52.5vw;
   max-height: 600px;
-  margin-left: 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
   cursor: pointer;
-  margin-left: 5%;
   margin-top: 5%;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
   background: #fcdfdb;
   font-family: "calligraffitiregular", sans-serif;
   color: #542c31;
@@ -264,19 +265,24 @@ header h1 {
   max-width: 400px;
   height: 52.5vw;
   max-height: 600px;
-  margin-left: 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
   cursor: pointer;
-  margin-right: 5%;
   margin-top: 5%;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
   background: #fff5fe;
   font-family: "redressedregular", sans-serif;
 }
-.row1__menu2 .txt_menu {
+.row1__menu2 .txt_menu p {
+  background: linear-gradient(to right, #de8621, #8f5bfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.row1__menu2 .txt_menu h2 {
   background: linear-gradient(to right, #de8621, #8f5bfe);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -291,19 +297,24 @@ header h1 {
   max-width: 400px;
   height: 52.5vw;
   max-height: 600px;
-  margin-left: 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
   cursor: pointer;
-  margin-left: 5%;
   margin-top: 5%;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
   background: #edefef;
   font-family: "black_jackregular", sans-serif;
 }
-.row2__menu3 .txt_menu {
+.row2__menu3 .txt_menu p {
+  background: linear-gradient(to bottom right, #052add, #1a91fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.row2__menu3 .txt_menu h2 {
   background: linear-gradient(to bottom right, #052add, #1a91fa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -313,19 +324,24 @@ header h1 {
   max-width: 400px;
   height: 52.5vw;
   max-height: 600px;
-  margin-left: 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
   cursor: pointer;
-  margin-right: 5%;
   margin-top: 5%;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
   background: #fdfffd;
   font-family: "playtime_with_hot_toddiesRg", sans-serif;
 }
-.row2__menu4 .txt_menu {
+.row2__menu4 .txt_menu p {
+  background: linear-gradient(to bottom right, #3d923a, #beff7f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.row2__menu4 .txt_menu h2 {
   background: linear-gradient(to bottom right, #3d923a, #beff7f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -352,16 +368,33 @@ header h1 {
 
 .row1__menu1:hover .txt_menu, .row1__menu2:hover .txt_menu, .row2__menu3:hover .txt_menu, .row2__menu4:hover .txt_menu {
   transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
   transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
   opacity: 50%;
 }
 
 /*RESPONSIVE*/
+/*---------------------------------------ECRANS LARGES*/
 @media all and (min-width: 960px) {
   .row1__menu1, .row1__menu2, .row2__menu3, .row2__menu4 {
+    width: 35vw;
     max-width: 350px;
+    height: 52.5vw;
     max-height: 525px;
-    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    margin-top: 10%;
+    margin-right: 30px;
+    margin-left: 30px;
   }
 
   .txt_menu p {
@@ -376,6 +409,42 @@ header h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 40px;
+  }
+}
+/*---------------------------------------PETITS ECRANS*/
+@media all and (max-width: 400px) {
+  .row1, .row2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .row1__menu1, .row1__menu2, .row2__menu3, .row2__menu4 {
+    width: 70vw;
+    max-width: 400px;
+    height: 105vw;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    margin-top: 10%;
+  }
+
+  .txt_menu p {
+    font-size: 7vw;
+    margin-bottom: -10%;
+  }
+  .txt_menu h2 {
+    font-size: 9vw;
+  }
+  .txt_menu i {
+    background: linear-gradient(to right, #f05761, #f6916a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 10vw;
   }
 }
 .menu1 {
@@ -431,14 +500,18 @@ header h1 {
   width: 80%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-size: 3vw;
   line-height: 1.8em;
   margin-top: -2.5em;
 }
-.tableau1 tr {
+.tableau1 table {
+  width: 100%;
+}
+.tableau1 table tr {
+  text-align: left;
   display: flex;
   justify-content: space-between;
-  text-align: left;
 }
 .tableau1 caption {
   font-size: 3.5vw;
@@ -533,15 +606,19 @@ header h1 {
   width: 80%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-size: 3vw;
   line-height: 1.8em;
   margin-top: -2.5em;
   margin-bottom: 5%;
 }
-.tableau2 tr {
+.tableau2 table {
+  width: 100%;
+}
+.tableau2 table tr {
+  text-align: left;
   display: flex;
   justify-content: space-between;
-  text-align: left;
 }
 .tableau2 caption {
   font-size: 3.5vw;
@@ -626,15 +703,19 @@ header h1 {
   width: 80%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-size: 3vw;
   line-height: 1.8em;
   margin-top: -2.5em;
   margin-bottom: 5%;
 }
-.tableau3 tr {
+.tableau3 table {
+  width: 100%;
+}
+.tableau3 table tr {
+  text-align: left;
   display: flex;
   justify-content: space-between;
-  text-align: left;
 }
 .tableau3 caption {
   font-size: 3.5vw;
@@ -716,15 +797,19 @@ header h1 {
   width: 80%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-size: 3vw;
   line-height: 1.8em;
   margin-top: -2.5em;
   margin-bottom: 5%;
 }
-.tableau4 tr {
+.tableau4 table {
+  width: 100%;
+}
+.tableau4 table tr {
+  text-align: left;
   display: flex;
   justify-content: space-between;
-  text-align: left;
 }
 .tableau4 caption {
   font-size: 3.5vw;
