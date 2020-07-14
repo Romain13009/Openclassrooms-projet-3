@@ -42,8 +42,10 @@
 /*texte souligné*/
 
 .entree_menu1, .plat_menu1, .dessert_menu1, .entree_menu2, .plat_menu2, .dessert_menu2, .entree_menu3, .plat_menu3, .dessert_menu3, .entree_menu4, .plat_menu4, .dessert_menu4{
+    position: relative;
     &::after {
-        content: '';
+        content:"";
+        position: absolute;
         width: 0;
         height:0.1rem;
         bottom: 0;

@@ -92,9 +92,17 @@
 
 @mixin parametre_trait{
     width: 25%;
-    vertical-align: middle;
+    height: 10%;
 }
 
+@mixin parametre_caption {
+    font-size: $police-section-menu;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 /* @media all and (min-width: 770px) */
 
 @mixin ls_parametre_tableau{

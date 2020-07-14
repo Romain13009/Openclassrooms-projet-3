@@ -37,8 +37,12 @@
 }
 /*souris survolant menu*/
 /*texte souligné*/
+.entree_menu1, .plat_menu1, .dessert_menu1, .entree_menu2, .plat_menu2, .dessert_menu2, .entree_menu3, .plat_menu3, .dessert_menu3, .entree_menu4, .plat_menu4, .dessert_menu4 {
+  position: relative;
+}
 .entree_menu1::after, .plat_menu1::after, .dessert_menu1::after, .entree_menu2::after, .plat_menu2::after, .dessert_menu2::after, .entree_menu3::after, .plat_menu3::after, .dessert_menu3::after, .entree_menu4::after, .plat_menu4::after, .dessert_menu4::after {
   content: "";
+  position: absolute;
   width: 0;
   height: 0.1rem;
   bottom: 0;
@@ -512,14 +516,18 @@ header h1 {
 .tableau1 caption {
   font-size: 3.5vw;
   font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .tableau1 caption .menu1_trait_gauche {
   width: 25%;
-  vertical-align: middle;
+  height: 10%;
 }
 .tableau1 caption .menu1_trait_droit {
   width: 25%;
-  vertical-align: middle;
+  height: 10%;
 }
 .tableau1 .price {
   font-weight: bold;
@@ -618,14 +626,19 @@ header h1 {
 }
 .tableau2 caption {
   font-size: 3.5vw;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .tableau2 caption .menu2_trait_gauche {
   width: 25%;
-  vertical-align: middle;
+  height: 10%;
 }
 .tableau2 caption .menu2_trait_droit {
   width: 25%;
-  vertical-align: middle;
+  height: 10%;
   transform: scaleX(-1);
 }
 .tableau2 .price {
@@ -715,14 +728,19 @@ header h1 {
 }
 .tableau3 caption {
   font-size: 3.5vw;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .tableau3 caption .menu3_trait_gauche {
   width: 25%;
-  vertical-align: middle;
+  height: 10%;
 }
 .tableau3 caption .menu3_trait_droit {
   width: 25%;
-  vertical-align: middle;
+  height: 10%;
   transform: scaleX(-1);
 }
 .tableau3 .price {
@@ -809,14 +827,19 @@ header h1 {
 }
 .tableau4 caption {
   font-size: 3.5vw;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .tableau4 caption .menu4_trait_gauche {
   width: 25%;
-  vertical-align: middle;
+  height: 10%;
 }
 .tableau4 caption .menu4_trait_droit {
   width: 25%;
-  vertical-align: middle;
+  height: 10%;
   transform: scaleX(-1);
 }
 .tableau4 .price {

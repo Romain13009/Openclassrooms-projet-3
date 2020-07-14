@@ -16,7 +16,7 @@
     @include parametre_tableau;
     margin-bottom: $margin-bottom-menu;
     & caption{
-        font-size: $police-section-menu;
+        @include parametre_caption;
         & .menu3_trait_gauche{
             @include parametre_trait;
         }

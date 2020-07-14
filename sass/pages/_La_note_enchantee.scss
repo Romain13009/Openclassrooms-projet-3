@@ -33,8 +33,7 @@
 .tableau1{
     @include parametre_tableau;
     & caption{
-        font-size: $police-section-menu;
-        font-weight: bold;
+        @include parametre_caption;
         & .menu1_trait_gauche{
             @include parametre_trait;
         }
